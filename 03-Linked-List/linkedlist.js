@@ -69,12 +69,29 @@ class LinkedList {
 
         while(currentNode) {
             if(currentNode.value === searchVal) {
-                return currentNode.value;
+                return currentNode;
             }
             currentNode = currentNode.next; // Move on to the next node in LinkedList
         }
 
         return null; // Reached end of LinkedList, did not find the value
+    }
+
+    indexOf(searchVal) {
+        let indexes = [];
+        let currentIndex = 0;
+        let currentNode = this.head;
+
+        while(currentNode) {
+            if(currentNode.value === searchVal) {
+                indexes.push(currentIndex);
+            }
+
+            currentNode = currentNode.next;
+            currentIndex++;
+        }
+
+        return indexes;
     }
 }
 
@@ -88,13 +105,19 @@ class Node {
 
 let ll = new LinkedList();
 ll.addToHead(100);
-ll.addToTail(200);
+ll.addToHead(200);
+ll.addToHead(300);
+ll.addToHead(200);
+ll.addToHead(400);
+ll.addToHead(200);
+
 
 console.log(ll);
+console.log(ll.indexOf(200));
 
-console.log(ll.removeHead());
-console.log(ll);
+// console.log(ll.removeHead());
+// console.log(ll);
 
-console.log(ll.removeTail());
-console.log(ll);
+// console.log(ll.removeTail());
+// console.log(ll);
 
