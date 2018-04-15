@@ -30,7 +30,7 @@ class LinkedList {
 
     removeHead() {
         if(!this.head) {
-            return null; // LinkedList is empty.
+            return null; // LinkedList is empty
         }
 
         let val = this.head.value;
@@ -38,9 +38,9 @@ class LinkedList {
         this.head = this.head.next;
 
         if(this.head) {
-            this.head.prev = null; // LinkedList is NOT empty.
+            this.head.prev = null; // LinkedList is NOT empty
         } else {
-            this.tail = null; // LinkedList is empty.
+            this.tail = null; // LinkedList is empty
         }
 
         return val;
@@ -56,12 +56,25 @@ class LinkedList {
         this.tail = this.tail.prev;
 
         if(this.tail) {
-            this.tail.next = null; // LinkedList is NOT empty.
+            this.tail.next = null; // LinkedList is NOT empty
         } else {
-            this.tail = null; // LinkedList is empty.
+            this.tail = null; // LinkedList is empty
         }
 
         return val;
+    }
+
+    search(searchVal) {
+        let currentNode = this.head; // Search from head to tail
+
+        while(currentNode) {
+            if(currentNode.value === searchVal) {
+                return currentNode.value;
+            }
+            currentNode = currentNode.next; // Move on to the next node in LinkedList
+        }
+
+        return null; // Reached end of LinkedList, did not find the value
     }
 }
 
@@ -76,8 +89,6 @@ class Node {
 let ll = new LinkedList();
 ll.addToHead(100);
 ll.addToTail(200);
-ll.addToHead(300);
-ll.addToTail(400);
 
 console.log(ll);
 
