@@ -29,3 +29,33 @@
             - Each node has references to previous and next nodes.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+* Big O Notation:
+
+    - Big O notation is used to classify how scalable algorithm or function is.
+    - In simple words, how long it will take to execute an algorithm based on input size.
+    - "O" stands for the function or algorithm we are executing and "(n)" stands for the size of the input.
+    - Examples:
+        - Constant Runtime "O(1)". i.e. Runtime does not increase if the input is large.
+        - Linear Runtime "O(n)". i.e. Runtime is proportional to size of the input.
+        - Exponential Runtime "O(n^2)". i.e. Runtime increases exponentially with the size of an input.
+        - Logarithmic Runtime "O(log n)". e.g. Binary Search. i.e. With every operation we perform, we are cutting the input in half.
+
+------------------------------------------------------------------------------------------------------------------------
+
+* LinkedList Performance:
+
+    - For Adding and Removing items into LinkedList:
+        - It has Constant Runtime time complexity. i.e. O(1).
+        - It is because we are using head and tail to keep track of start and end of LinkedList.
+        - And we will perform insert or remove operations only at head or tail locations.
+    - For Searching an item in LinkedList:
+        - It has Linear Runtime time complexity. i.e. O(n).
+        - It is because in a worst case scenario, we will have to iterate through entire LinkedList to find the value.
+        - As our LinkedList grows in size, our search function runtime will also increase.
+        - O(n) is still an acceptable time complexity.
+    - Memory management benifits:
+        - Data doesn't have to be stored together.
+            - For e.g. On hard disk, data is scattered in different locations but every data has pointers to next and prev.
+
+------------------------------------------------------------------------------------------------------------------------
