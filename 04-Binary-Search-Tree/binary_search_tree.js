@@ -61,6 +61,25 @@ class Binary_Search_Tree {
             iterator_func(this.value);
         }
     }
+
+    /** Breadth First Traversal */
+    breadth_first_traversal(iterator_func) {
+        let queue = [this]; // Put our root node into the queue initially.
+
+        while(queue.length) {
+            let node = queue.shift();
+
+            iterator_func(node.value);
+
+            if(node.left !== null) {
+                queue.push(node.left);
+            }
+
+            if(node.right !== null) {
+                queue.push(node.right);
+            }
+        }
+    }
 }
 
 let bst = new Binary_Search_Tree(50);
@@ -78,4 +97,5 @@ bst.insert(10);
 
 // console.log(bst.contains(105));
 
-bst.depth_first_traversal(value => console.log(value), 'postorder');
+// bst.depth_first_traversal(value => console.log(value), 'postorder');
+bst.breadth_first_traversal(value => console.log(value));
