@@ -20,6 +20,24 @@ class Binary_Search_Tree {
             }
         }
     }
+
+    contains(value) {
+        if(value === this.value) {
+            return true; // Found the value at first node.
+        } else if(value < this.value) {
+            if(this.left === null) {
+                return false; // There is no left node.
+            } else {
+                return this.left.contains(value); // Traverse tree recursively until we find a node value.
+            }
+        } else if (value > this.value) {
+            if(this.right === null) {
+                return false; // There is no right node.
+            } else {
+                return this.right.contains(value); // Traverse tree recursively until we find a node value.
+            }
+        }
+    }
 }
 
 let bst = new Binary_Search_Tree(50);
@@ -34,4 +52,4 @@ bst.insert(35);
 bst.insert(85);
 bst.insert(105);
 bst.insert(10);
-console.log(bst.left.right.left);
+console.log(bst.contains(105));
