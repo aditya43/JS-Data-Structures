@@ -39,16 +39,26 @@ class Binary_Search_Tree {
         }
     }
 
-    /** Inorder Depth First Traversal Method */
-    depth_first_traversal(iterator_func) {
-        if(this.left) {
-            this.left.depth_first_traversal(iterator_func); // Traverse left node.
+    /** Depth First Traversal Method */
+    depth_first_traversal(iterator_func, order) {
+        if(order === 'preorder') {
+            iterator_func(this.value);
         }
 
-        iterator_func(this.value); // Print the value of current node.
+        if(this.left) {
+            this.left.depth_first_traversal(iterator_func, order); // Traverse left node.
+        }
+
+        if(order === 'inorder') {
+            iterator_func(this.value);
+        }
 
         if(this.right) {
-            this.right.depth_first_traversal(iterator_func); // Traverse right node.
+            this.right.depth_first_traversal(iterator_func, order); // Traverse right node.
+        }
+
+        if(order === 'postorder') {
+            iterator_func(this.value);
         }
     }
 }
@@ -66,6 +76,6 @@ bst.insert(85);
 bst.insert(105);
 bst.insert(10);
 
-console.log(bst.contains(105));
+// console.log(bst.contains(105));
 
-bst.depth_first_traversal(value => console.log(value) );
+bst.depth_first_traversal(value => console.log(value), 'postorder');

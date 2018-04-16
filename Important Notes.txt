@@ -69,3 +69,24 @@
         3. Traverse the right subtree.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+* Binary Search Tree - Preorder Depth First Traversal
+
+    - Preorder traversal is used to create a copy of the tree.
+    - Preorder traversal is also used to get prefix expression on of an expression tree.
+    - Algorithm :
+        1. Visit the root.
+        2. Traverse the left subtree.
+        3. Traverse the right subtree.
+
+------------------------------------------------------------------------------------------------------------------------
+* Binary Search Tree - Postorder Depth First Traversal
+
+    - Postorder traversal is used to delete the tree.
+    - Postorder traversal is also useful to get the postfix expression of an expression tree.
+    - Algorithm :
+        1. Traverse the left subtree.
+        2. Traverse the right subtree.
+        3. Visit the root.
+
+------------------------------------------------------------------------------------------------------------------------
