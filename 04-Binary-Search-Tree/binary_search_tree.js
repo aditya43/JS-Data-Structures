@@ -115,7 +115,7 @@ bst.insert(10);
 
 // console.log(bst.contains(105));
 
-// bst.depth_first_traversal(value => console.log(value), 'inorder');
+bst.depth_first_traversal(value => console.log(value), 'inorder');
 // bst.depth_first_traversal(value => console.log(value), 'preorder');
 // bst.depth_first_traversal(value => console.log(value), 'postorder');
 // bst.breadth_first_traversal(value => console.log(value));

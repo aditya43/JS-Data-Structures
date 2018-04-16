@@ -24,13 +24,17 @@ class Hash_Table {
 
         if(!this.buckets[index]) {
             this.buckets[index] = new Node(key, val);
+        } else if(this.buckets[index].key === key) {
+            this.buckets[index].value = value;
         } else {
             let current_node = this.buckets[index];
-
             while(current_node.next) {
+                if(current_node.next.key === key) {
+                    current_node.next.val = val;
+                    return;
+                }
                 current_node = current_node.next;
             }
-
             current_node.next = new Node(key, val);
         }
     }
