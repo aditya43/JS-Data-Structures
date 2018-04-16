@@ -80,6 +80,22 @@ class Binary_Search_Tree {
             }
         }
     }
+
+    get_min_val() {
+        if(this.left) {
+            return this.left.get_min_val();
+        } else {
+            return this;
+        }
+    }
+
+    get_max_val() {
+        if(this.right) {
+            return this.right.get_max_val();
+        } else {
+            return this;
+        }
+    }
 }
 
 let bst = new Binary_Search_Tree(50);
@@ -98,4 +114,7 @@ bst.insert(10);
 // console.log(bst.contains(105));
 
 // bst.depth_first_traversal(value => console.log(value), 'postorder');
-bst.breadth_first_traversal(value => console.log(value));
+// bst.breadth_first_traversal(value => console.log(value));
+
+console.log('Minimum value: ' + bst.get_max_val());
+console.log('Maximum value: ' + bst.get_min_val());
