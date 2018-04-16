@@ -105,6 +105,8 @@ bst.insert(100);
 bst.insert(60);
 bst.insert(59);
 bst.insert(20);
+bst.insert(50);
+bst.insert(10);
 bst.insert(45);
 bst.insert(35);
 bst.insert(85);
@@ -113,8 +115,10 @@ bst.insert(10);
 
 // console.log(bst.contains(105));
 
+// bst.depth_first_traversal(value => console.log(value), 'inorder');
+// bst.depth_first_traversal(value => console.log(value), 'preorder');
 // bst.depth_first_traversal(value => console.log(value), 'postorder');
 // bst.breadth_first_traversal(value => console.log(value));
 
-console.log('Minimum value: ' + bst.get_max_val());
-console.log('Maximum value: ' + bst.get_min_val());
+console.log('Minimum value: ' + bst.get_max_val().value);
+console.log('Maximum value: ' + bst.get_min_val().value);
