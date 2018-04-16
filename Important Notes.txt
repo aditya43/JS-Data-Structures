@@ -59,3 +59,13 @@
             - For e.g. On hard disk, data is scattered in different locations but every data has pointers to next and prev.
 
 ------------------------------------------------------------------------------------------------------------------------
+
+* Binary Search Tree - Inorder Depth First Traversal
+
+    - Touching nodes in least to greater order.
+    - Algorithm :
+        1. Traverse the left subtree.
+        2. Visit the root.
+        3. Traverse the right subtree.
+
+------------------------------------------------------------------------------------------------------------------------
