@@ -120,4 +120,3 @@ console.log(ll.indexOf(200));
 
 // console.log(ll.removeTail());
 // console.log(ll);
-
